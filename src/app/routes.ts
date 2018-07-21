@@ -1,26 +1,20 @@
 import { Routes } from "@angular/router";
-import { BooksMainComponent } from "./books-main/books-main.component";
-import { CollectionsComponent } from "./collections/collections.component";
-import { FavoritesComponent } from "./favorites/favorites.component";
-import { BookDetailComponent } from "./book-detail/book-detail.component";
+
 
 export const routes: Routes = [    
     {
+        path: 'main',
+        loadChildren: './core/core.module#CoreModule'
+    },
+    {
         path: '',
-        component: BooksMainComponent
+        redirectTo: 'main/books',
+        pathMatch: 'full'
     },
     {
-        path: 'collections',
-        component: CollectionsComponent
-    },
-    {
-        path: 'favorites',
-        component: FavoritesComponent
-    },
-    {
-        path: 'detail/:id',
-        component: BookDetailComponent
-    },
+        path: 'login',
+        loadChildren: './auth/auth.module#AuthModule'        
+    },    
     {
         path: '**',
         redirectTo: ''

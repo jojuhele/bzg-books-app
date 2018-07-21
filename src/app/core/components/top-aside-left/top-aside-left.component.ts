@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { User } from "../aside-left/user";
+import { User } from "../../../auth/models/user";
 
 @Component({
   selector: 'app-top-aside-left',
