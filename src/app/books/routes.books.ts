@@ -8,6 +8,9 @@ export const routes: Routes = [
         component: BooksMainComponent
     },
     {
+        path: '', redirectTo: 'list', pathMatch: 'full'
+    },
+    {
         path: 'detail/:id',
         component: BookDetailComponent
     },

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
+import { AppPipesModule } from "../app-pipes/app-pipes.module";
 import { routes } from "./routes.core";
 import { CoreComponent } from './containers/core';
 import { AsideLeftComponent } from "./containers/aside-left/aside-left.component";
@@ -12,7 +13,8 @@ import { TopAsideLeftComponent } from "./components/top-aside-left/top-aside-lef
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    AppPipesModule
   ],
   declarations: [CoreComponent, AsideLeftComponent, MainContentComponent, TopAsideLeftComponent, TopNavAppComponent, MenuAsideLeftComponent],
   exports: [CoreComponent]

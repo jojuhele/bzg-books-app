@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoreComponent implements OnInit {
 
+  stateAside: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  closeAside(state){
+    this.stateAside = state;
+  }
 }
